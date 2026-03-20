@@ -425,7 +425,9 @@ tbody tr:hover {
 .modal {
   background: white;
   padding: 20px;
+  min-width: 450px;
   border-radius: 12px;
+  border-left: 5px solid #146cd1;
   max-height: 90vh;
   overflow-y: auto;
 }

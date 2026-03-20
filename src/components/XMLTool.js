@@ -20,7 +20,7 @@ export default function XMLTool() {
   const [copied, setCopied] = useState(false);
   const [showToolsModal, setShowToolsModal] = useState(false);
   const [isResetting, setIsResetting] = useState(false);
-  const [fileName, setFileName] = useState("output.csv");
+  const [fileName, setFileName] = useState("Get_Status_Mappings.csv");
   const [config, setConfig] = useState({
     groupTag: "",
     stepTag: "",
