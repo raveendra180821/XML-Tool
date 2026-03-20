@@ -20,6 +20,7 @@ export default function XMLTool() {
   const [copied, setCopied] = useState(false);
   const [showToolsModal, setShowToolsModal] = useState(false);
   const [isResetting, setIsResetting] = useState(false);
+  const [uploadedFileName, setUploadedFileName] = useState("");
   const [fileName, setFileName] = useState("Get_Status_Mappings.csv");
   const [config, setConfig] = useState({
     groupTag: "",
@@ -167,6 +168,8 @@ export default function XMLTool() {
     const file = e.target.files[0];
     if (!file) return;
 
+    setUploadedFileName(file.name);
+
     const reader = new FileReader();
     reader.onload = (event) => setXmlInput(event.target.result);
     reader.readAsText(file);
@@ -176,6 +179,7 @@ export default function XMLTool() {
     setIsResetting(true);
 
     setTimeout(() => {
+      setUploadedFileName("");
       setXmlInput("");
       setOutput("");
       setTableData([]);
@@ -269,9 +273,9 @@ export default function XMLTool() {
       )}
 
       <div className={`container ${isResetting ? "resetting" : ""}`}>
-        <p className="subtitle">
-          Convert structured XML into clean CSV in seconds
-        </p>
+        {uploadedFileName && (
+          <div className="file-name hide-scrollbar">{uploadedFileName}</div>
+        )}
 
         {/* INPUT */}
         <div className="card">
