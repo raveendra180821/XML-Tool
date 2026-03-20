@@ -170,6 +170,21 @@ export default function XMLTool() {
 
     setUploadedFileName(file.name);
 
+    // Auto-generate CSV file name from uploaded XML
+    const baseName = file.name.replace(/\.xml$/i, "");
+
+    // Only set if user hasn't manually changed it
+    setFileName((prev) => {
+      if (
+        prev === "Get_Status_Mappings.csv" || // default
+        prev === "" ||
+        prev.endsWith(".csv")
+      ) {
+        return baseName + ".csv";
+      }
+      return prev;
+    });
+
     const reader = new FileReader();
     reader.onload = (event) => setXmlInput(event.target.result);
     reader.readAsText(file);
@@ -180,6 +195,7 @@ export default function XMLTool() {
 
     setTimeout(() => {
       setUploadedFileName("");
+      setFileName("Get_Status_Mappings.csv");
       setXmlInput("");
       setOutput("");
       setTableData([]);
