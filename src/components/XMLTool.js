@@ -168,6 +168,12 @@ export default function XMLTool() {
     const file = e.target.files[0];
     if (!file) return;
 
+    // ✅ Validate file type
+    if (!file.name.toLowerCase().endsWith(".xml")) {
+      alert("Please upload a valid XML file");
+      return;
+    }
+
     setUploadedFileName(file.name);
 
     // Auto-generate CSV file name from uploaded XML
@@ -302,6 +308,7 @@ export default function XMLTool() {
                 type="file"
                 ref={fileInputRef}
                 onChange={handleFileUpload}
+                accept=".xml"
               />
             </label>
 
