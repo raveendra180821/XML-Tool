@@ -281,7 +281,14 @@ export default function XMLTool() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Lovable ↗
+              <b>Lovable</b> - comparision tool ↗
+            </a>
+            <a
+              href="https://claude.ai/public/artifacts/be027295-87c4-4c17-a9c0-488316bb597d/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <b>DRL to CSV</b> converter ↗
             </a>
 
             <button
