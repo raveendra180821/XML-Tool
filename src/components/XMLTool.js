@@ -277,6 +277,14 @@ export default function XMLTool() {
             <h4>Other Tools</h4>
 
             <a
+              href="https://bpd-spark.vercel.app//"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <b>BPD Validation</b> - tool ↗
+            </a>
+
+            <a
               href="https://data-hugger-05.lovable.app/"
               target="_blank"
               rel="noopener noreferrer"
