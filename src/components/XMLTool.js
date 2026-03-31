@@ -456,7 +456,7 @@ export default function XMLTool() {
                 <thead>
                   <tr>
                     <th>Workflow Step</th>
-                    <th>Label</th>
+                    <th>Workflow_Step_Alternate_Name</th>
                     <th>Reference ID</th>
                   </tr>
                 </thead>
