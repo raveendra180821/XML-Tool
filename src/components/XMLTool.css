@@ -397,6 +397,7 @@ textarea:focus {
 table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 thead {
@@ -408,6 +409,7 @@ th {
   color: #fff;
   text-align: left;
 }
+
 
 td {
   padding: 12px;
