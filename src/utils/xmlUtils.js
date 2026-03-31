@@ -54,7 +54,7 @@ export function convertXMLToCSV(xmlStr, config) {
 
   const groups = xml.getElementsByTagNameNS("*", groupTag);
 
-  let csv = "Workflow_Step,label,referenceID\n";
+  let csv = "Workflow_Step,Workflow_Step_Alternate_Name,referenceID\n";
   let tableData = [];
 
   for (let group of groups) {
